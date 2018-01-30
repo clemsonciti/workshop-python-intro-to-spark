@@ -4,17 +4,25 @@ This full-day workshop aims to provide participants with a detailed knowledge on
 
 - The concepts of MapReduce programming paradigm
 - How Apache Spark leverages these concepts to process massive amount of data in-memory
-- How to integrate Spark-based components into standard HPC workflow on Palmetto
 
+By the end of the workshop, the participants are expected to be able to 
 
-By the end of the workshop, the participants are expected to be able to:
-
-- Be able to interact and perform data analytics with data stored in HDFS via Spark notebooks
-- Be able to write PBS scripts to launch Sparkjobs and extract results. 
+- understand the data structure and programming model for Spark
+- be able to interact and perform data analytics with data stored in HDFS via Spark notebooks
 
 Having an account on Palmetto is required for this workshop. It is recommended that participants 
 either have attended or are comfortable with materials in 
 the [Hadoop workshop](https://github.com/clemsonciti/intro-to-hadoop-python)
+
+This workshop will be delivered via [JupyterHub](https://www.palmetto.clemson.edu/jupyterhub). When you 
+start your Jupyter server for the first time, you need to open a terminal and edit the files `~/.jhubrc`
+ and `~/.bashrc` to include the following lines *(you only need the first line for `.jhubrc` and both lines
+ for `.bashrc`)*:
+ 
+ ```
+ module load hdp
+ cypress-kinit
+ ```
 
 If you need to register for a new account, please make sure that you specify the followings
 in the new account registration form:
