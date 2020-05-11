@@ -4,10 +4,10 @@ export SPARK_HOME="/home/$USER/software/spark-2.4.5-bin-hadoop2.7"
 export SPARK_CONF_DIR=$SPARK_HOME/conf
 export PATH=$SPARK_HOME:$PATH
 
-master=`cat $PBS_NODEFILE | sort | uniq | head -n 1`
+master=`cat $PBS_NODEFILE | uniq | head -n 1`
 echo $master > $SPARK_HOME/conf/master
 
-cat $PBS_NODEFILE | sort | uniq | tail -n +2 > $SPARK_HOME/conf/slaves
+cat $PBS_NODEFILE | uniq | tail -n +2 > $SPARK_HOME/conf/slaves
 
 # get num node info
 N=`qstat -an1 $PBS_JOBID | awk 'END {print $6}'`
